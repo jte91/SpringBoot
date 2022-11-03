@@ -10,26 +10,22 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class StudentConfig {
-    
 
     @Bean
-    CommandLineRunner commandLineRunner(StudentRepository repository){
+    CommandLineRunner commandLineRunner(StudentRepository repository) {
         return args -> {
             Student mariam = new Student(
-                null, "Mariam",
-                "mariam.jamal@gmail.com", 
-                LocalDate.of(2000,Month.JANUARY,5), null
-            );
+                    null, "Mariam",
+                    "mariam.jamal@gmail.com",
+                    LocalDate.of(2000, Month.JANUARY, 5), null);
 
             Student alex = new Student(
-                null, "Alex",
-                "alex@gmail.com", 
-                LocalDate.of(2004,Month.JANUARY,5), null
-            );
+                    null, "Alex",
+                    "alex@gmail.com",
+                    LocalDate.of(2004, Month.JANUARY, 5), null);
 
             repository.saveAll(
-                List.of(mariam, alex)
-                );
+                    List.of(mariam, alex));
         };
     }
 }
