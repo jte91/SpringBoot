@@ -23,6 +23,7 @@ import lombok.ToString;
 @Setter
 @ToString
 public class Student {
+    
     @Id
     @SequenceGenerator(
         name = "student_sequence",
